@@ -581,17 +581,36 @@ Explanation: CHAT GPT
 
 // Q4. **Sort an Array in Ascending Order** __  Ascending Order    .sort((a,b)=> a-b)
 
-// let array = [1, 2, 3, 4, 5,100,-2];
+// let array = [1,2,3,4,5,100,-2];
 
+// Method_1 (using inbuilt function)
 // function sortArray(array){
 //  array.sort((a,b)=> a-b)
 // console.log(array)
 // }
 // sortArray(array)
 
+// Method_2 (using sorting algorithm)
+// let arr1 = [1,2,3,4,5,100,-2];
+// for (i = 0; i < arr1.length; i++) {
+
+//     for (j = i + 1; j < arr1.length; j++) {
+//         let temp = 0;
+//         if (arr1[i] > arr1[j]) {
+//             temp = arr1[i]
+//             arr1[i] = arr1[j]
+//             arr1[j] = temp
+//         }
+//     }
+
+// }
+// console.log(arr1)
+
+
 
 // Q5. **Sort an Array in Descending Order**                   Descending Order    .sort((a,b)=> b-a)
 
+// Method_1 (using inbuilt function)
 // let array = [1, 2, 3, 4, 5,100,-2];
 
 // function sortArray(array){
@@ -599,6 +618,22 @@ Explanation: CHAT GPT
 // console.log(array)
 // }
 // sortArray(array)
+
+// Method_2 (using sorting algorithm)
+// let arr1 = [1,2,3,4,5,100,-2];
+// for (i = 0; i < arr1.length; i++) {
+
+//     for (j = i + 1; j < arr1.length; j++) {
+//         let temp = 0;
+//         if (arr1[i] < arr1[j]) {
+//             temp = arr1[i]
+//             arr1[i] = arr1[j]
+//             arr1[j] = temp
+//         }
+//     }
+
+// }
+// console.log(arr1)
 
 
 
@@ -616,6 +651,7 @@ Explanation: CHAT GPT
 
 
 // Q7. **Check if an Array Contains a Specific Element**
+// Important Model for checking using bools
 
 // let array = [1, 2, 3, 4, , 100, -2];
 // let element = 5;
@@ -636,13 +672,35 @@ Explanation: CHAT GPT
 
 
 // Q8. **Find the Index of a Specific Element in an Array**
+//   - Task: Write a function that returns the index of a specific element in an array. If the element is not found, return -1.  
 
-// let array = [1, 2, 3, 4,5 , 100, -2];
+
+//method_1 (using inbuilt function)
+// let array = [1, 2, 3, 4, 5, 100, -2];
 // let element = 5;
-// function findIndex(array,element){
+// function findIndex(array, element) {
 //     console.log(array.indexOf(element))
 // }
-// findIndex(array,element)
+// findIndex(array, element)
+
+//method_2 (without inbuilt functions finding index)
+// let array = [1, 2, 3, 4, 5, 100, -2];
+// let element = 100;
+// let count = -1;
+// function findIndex(array, element) {
+//     if (!array.includes(element)) { console.log(-1) }
+//     else {
+//         for (i = 0; i < array.length; i++) {
+//             count = count + 1
+
+//             if (array[i] == element) {
+//                 break;
+//             }
+//         }
+//         console.log(count)
+//     }
+// } findIndex(array, element)
+
 
 // Q9. **Remove Duplicates from an Array**
 
@@ -790,6 +848,9 @@ Explanation: CHAT GPT
 
 
 // Q13. **Check if an Array is Sorted**
+
+//Method 1 (Creating a shallow copy of array, sorting it and comparing it to original
+
 // let array = [1, 2, 3, 5, 4];
 // let sortedArray = [...array].sort((a, b) => a - b); // Create a sorted copy of the original array
 
@@ -809,7 +870,6 @@ Explanation: CHAT GPT
 // console.log(check)
 // }
 // isSorted(array)
-
 
 
 // Q14. **Find the Difference of Two Arrays**

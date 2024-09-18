@@ -21,6 +21,7 @@
 
 // Method_1 (Checking each element)
 //outer loop will iterate form min element to max element ie 8
+
 // for (i = 1; i < 8; i++) {
 
 //     // inner loop will iterate in array and check missing number
