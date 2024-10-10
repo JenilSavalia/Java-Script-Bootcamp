@@ -5,9 +5,9 @@ Objects are containers for Properties and Methods.
 
 const car = {
     type: "Fiat",
-    model: "500", 
+    model: "500",
     color: "white"
-};
+  };
 
 
 /*How to Define a JavaScript Object
@@ -20,17 +20,17 @@ const car = {
 
 // An object literal is a list of name:value pairs inside curly braces {}.
 // ex:
-{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+{ firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" }
 
 
 
 // Create an Object
 const person = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50,
-    eyeColor: "blue"
-  };
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
 
 
 // Example below creates an empty JavaScript object, and then adds 4 properties:
@@ -67,8 +67,8 @@ person.eyeColor = "blue";
 // The named values, in JavaScript objects, are called properties.
 
 
-   1) objectName.propertyName
-   2) objectName["propertyName"]
+1) objectName.propertyName
+2) objectName["propertyName"]
 
 
 //    JavaScript Object Methods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -80,13 +80,13 @@ Methods are function definitions stored as property values.
 
 // ex
 const person = {
-    firstName: "John",
-    lastName : "Doe",
-    id       : 5566,
-    fullName : function() {
-      return this.firstName + " " + this.lastName;
-    }
-  };
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+};
 
 
 
@@ -124,16 +124,16 @@ JavaScript Objects are Mutable
 
 //Create an Object
 const person = {
-    firstName:"John",
-    lastName:"Doe",
-    age:50, eyeColor:"blue"
-  }
-  
-  // Create a copy
-  const x = person;
-  
-  // Change Age in both
-  x.age = 10;
+  firstName: "John",
+  lastName: "Doe",
+  age: 50, eyeColor: "blue"
+}
+
+// Create a copy
+const x = person;
+
+// Change Age in both
+x.age = 10;
 
 // NOTE:
 // The object x is not a copy of person. The object x is person.
@@ -142,29 +142,29 @@ const person = {
 
 Adding New Properties ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// You can add new properties to an existing object by simply giving it a value:
+  // You can add new properties to an existing object by simply giving it a value:
 
-person.nationality = "English";
+  person.nationality = "English";
 
 
 Deleting Properties ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// The delete keyword deletes a property from an object:
+  // The delete keyword deletes a property from an object:
 
-delete person.age;
+  delete person.age;
 
 
 
 JavaScript Object Methods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 const person = {
-    firstName: "John",
-    lastName: "Doe",
-    id: 5566,
-    fullName: function() {
-      return this.firstName + " " + this.lastName;
-    }
-  };
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+};
 
 
   Accessing Object Methods
@@ -179,14 +179,14 @@ name = person.fullName();
 
 
 
-How to Display JavaScript Objects? ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to Display JavaScript Objects ? ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-// Some solutions to display JavaScript objects are:
+  // Some solutions to display JavaScript objects are:
 
-// • Displaying the Object Properties by name ---------------------------------------------------------
+  // • Displaying the Object Properties by name ---------------------------------------------------------
 
-person.name + "," + person.age + "," + person.city;
+  person.name + "," + person.age + "," + person.city;
 
 
 // • Displaying the Object Properties in a Loop --------------------------------------------------------
@@ -196,12 +196,12 @@ person.name + "," + person.age + "," + person.city;
 //     age: 30,
 //     city: "New York"
 //   };
-  
 
-  let text = "";
-  for (let x in person) {
-    text += person[x] + " ";
-  };
+
+let text = "";
+for (let x in person) {
+  text += person[x] + " ";
+};
 
 
 //   Note:
@@ -216,16 +216,16 @@ Object.values() creates an array from the property values
 
 // Create an Object
 const person = {
-    name: "John",
-    age: 30,
-    city: "New York"
-  };
-  
-  // Create an Array
-  const myArray = Object.values(person);
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Create an Array
+const myArray = Object.values(person);
 
 //   o/p
-[ 'John', 30, 'New York' ]
+['John', 30, 'New York']
 
 //   ---------------------------------------------------------------------------------------
 
@@ -240,13 +240,13 @@ console.log(Object.entries(person));
 
 // o/p
 
-[ [ 'name', 'John' ], [ 'age', 30 ], [ 'city', 'New York' ] ]
+[['name', 'John'], ['age', 30], ['city', 'New York']]
 
 
 
 // exMPLE
 
-const fruits = {Bananas:300, Oranges:200, Apples:500};
+const fruits = { Bananas: 300, Oranges: 200, Apples: 500 };
 
 let text = "";
 for (let [fruit, value] of Object.entries(fruits)) {
@@ -261,10 +261,10 @@ for (let [fruit, value] of Object.entries(fruits)) {
 
 // Syntax:
 for (variable of iterable) {
-    // code block to be executed
-  }
+  // code block to be executed
+}
 
-• variable: Holds the current value from the iterable 
+• variable: Holds the current value from the iterable
 // (e.g., an element in an array or a character in a string).
 
 • iterable: The object that can be looped over, such as an array, string, map, or set.
@@ -287,8 +287,8 @@ for (variable of iterable) {
 
 JavaScript objects can be converted to a string with JSON method JSON.stringify().
 
-  // Stringify Object
-  let myString = JSON.stringify(person);
+// Stringify Object
+let myString = JSON.stringify(person);
 
 // The result will be a string written in JSON notation:
 // {"name":"John","age":50,"city":"New York"}
@@ -299,7 +299,7 @@ JavaScript objects can be converted to a string with JSON method JSON.stringify(
 
 
 
-Object Constructor Functions
+  Object Constructor Functions
 
 // Sometimes we need to create many objects of the same type.
 // To create an object type we use an object constructor function
@@ -307,11 +307,11 @@ Object Constructor Functions
 
 // example
 function Person(first, last, age, eye) {
-    this.firstName = first;
-    this.lastName = last;
-    this.age = age;
-    this.eyeColor = eye;
-  }
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
 
 //   Note:
 // In the constructor function, this has no value.
@@ -340,7 +340,7 @@ Person.prototype.nationality = "English";
 
 
 
-Built-in JavaScript Constructors
+Built -in JavaScript Constructors
 
 // JavaScript has built-in constructors for all native objects:
 
@@ -355,3 +355,452 @@ Built-in JavaScript Constructors
 
 
 
+__________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+Basic Questions on JS Objects
+
+// 1. **Create a Simple Object**
+//    - Task: Create an object representing a person with properties `name`, `age`, and `city`.
+//    - Test:
+//      ```javascript
+//      const person = createPerson("John", 25, "New York");
+//      console.log(person);
+//      ```
+//    - Expected Output: `{ name: 'John', age: 25, city: 'New York' }`
+
+
+
+function createPerson(name, age, city) {
+
+  this.name = name,
+    this.Age = age,
+    this.City = city
+
+}
+
+const Person = new createPerson("Jenil", 18, "BDQ");
+console.log(Person)
+
+
+
+// 2. **Access Object Properties**
+//    - Task: Write a function that returns the value of a given property from an object.
+//    - Test:
+//      ```javascript
+//      const obj = { name: 'Alice', age: 30 };
+//      console.log(getProperty(obj, 'name'));
+//      ```
+//    - Expected Output: `'Alice'`
+
+
+
+
+function getProperty(obj, name) {
+  return obj[name];
+}
+
+const obj = { name: 'Alice', age: 30 };
+
+console.log(getProperty(obj, 'name'));
+
+
+// 3. **Add a New Property to an Object**
+//    - Task: Write a function that adds a new property to an object.
+//    - Test:
+//      ```javascript
+//      const car = { brand: 'Toyota', model: 'Corolla' };
+//      addProperty(car, 'year', 2020);
+//      console.log(car);
+//      ```
+//    - Expected Output: `{ brand: 'Toyota', model: 'Corolla', year: 2020 }`
+
+
+
+function addProperty(obj, property, value) {
+  obj[property] = value;
+}
+
+const car = { brand: 'Toyota', model: 'Corolla' };
+
+addProperty(car, 'year', 2020);
+console.log(car);
+
+
+// 4. **Delete a Property from an Object**
+//    - Task: Write a function that deletes a property from an object.
+//    - Test:
+//      ```javascript
+//      const user = { username: 'john_doe', password: '12345' };
+//      deleteProperty(user, 'password');
+//      console.log(user);
+//      ```
+//    - Expected Output: `{ username: 'john_doe' }`
+
+
+function deleteProperty(obj, property) {
+  delete obj[property];
+}
+
+const user = { username: 'john_doe', password: '12345' };
+
+deleteProperty(user, 'password');
+console.log(user);
+
+
+
+// Note diff b/w obj.prop and obj[prop]
+
+// • delete obj.prop uses dot notation, which means it will delete the property named prop (literally "prop") from the object.
+// • delete obj[prop] uses bracket notation, which means it will delete the property whose name is stored in the variable prop.
+
+
+
+
+// 5. **Check if an Object has a Property**
+//    - Task: Write a function that checks if an object has a specific property.
+//    - Test:
+//      ```javascript
+//      const obj = { name: 'Alice', age: 30 };
+//      console.log(hasProperty(obj, 'age'));
+//      ```
+//    - Expected Output: `true`
+
+
+
+function hasProperty(obj, prop) {
+
+  for (let x in obj) {
+    if (x == prop) {
+      return true;
+      count = 1;
+      break;
+    }
+  }
+
+  if (count != 1) {
+    return false;
+  }
+}
+
+const obj = { name: 'Alice', age: 30 };
+console.log(hasProperty(obj, 'age'));
+
+
+
+// or (with inbuilt function)
+
+function hasProperty(obj, prop) {
+  return obj.hasOwnProperty(prop);
+}
+
+const obj = { name: 'Alice', age: 30 };
+console.log(hasProperty(obj, 'age'));
+
+
+// 6. **Merge Two Objects**
+//  - Task: Write a function that merges two objects into one.
+//  - Test:
+//    ```javascript
+//    const obj1 = { a: 1, b: 2 };
+//    const obj2 = { b: 3, c: 4 };
+//    console.log(mergeObjects(obj1, obj2));
+//    ```
+//  - Expected Output: `{ a: 1, b: 3, c: 4 }`
+
+
+function mergeObjects(obj1, obj2) {
+
+  for (let [key, value] of Object.entries(obj2)) {
+
+    obj1[key] = value;
+
+  }
+  return obj1;
+}
+
+var obj1 = { a: 1, b: 2 };
+var obj2 = { b: 3, c: 4 };
+
+console.log(mergeObjects(obj1, obj2));
+
+
+// 7. **Clone an Object**
+//    - Task: Write a function that creates a deep clone of an object.
+//    - Test:
+//      ```javascript
+//      const original = { name: 'Alice', details: { age: 30, city: 'NYC' } };
+//      const clone = cloneObject(original);
+//      clone.details.city = 'LA';
+//      console.log(original.details.city);
+//      console.log(clone.details.city);
+//      ```
+//    - Expected Output:
+//      ```
+//      'NYC'
+//      'LA'
+//      ```
+
+
+
+
+function cloneObject(obj) {
+  return structuredClone(obj);
+}
+
+const original = { name: 'Alice', details: { age: 30, city: 'NYC' } };
+
+const clone = cloneObject(original);
+
+clone.details.city = 'LA';
+console.log(original.details.city);
+console.log(clone.details.city);
+
+
+
+// 8. **Loop Through Object Properties**
+//    - Task: Write a function that loops through all the properties of an object and prints them.
+//    - Test:
+//      ```javascript
+//      const user = { name: 'John', age: 30, city: 'New York' };
+//      printProperties(user);
+//      ```
+//    - Expected Output:
+//      ```
+//      name: John
+//      age: 30
+//      city: New York
+//      ```
+
+
+function printProperties(obj) {
+  let result = "";
+
+  for (let [key, value] of Object.entries(obj)) {
+
+    result += key + " : " + value + "\n";
+  }
+  return result;
+}
+
+
+// const user = { name: 'John', age: 30, city: 'New York' };
+//      console.log(printProperties(user));
+
+
+//      9. **Count the Number of Properties in an Object**
+//      - Task: Write a function that counts the number of properties in an object.
+//      - Test:
+//        ```javascript
+//        const obj = { name: 'Alice', age: 30, city: 'NYC' };
+//        console.log(countProperties(obj));
+//        ```
+//      - Expected Output: `3`
+
+
+function countProperties(object) {
+  let count = 0;
+
+  for (let [key, value] of Object.entries(obj)) {
+
+    count++;
+  }
+  return count;
+}
+
+const obj = { name: 'Alice', age: 30, city: 'NYC' };
+console.log(countProperties(obj));
+
+
+
+//  10. **Convert Object to Array of Keys**
+//  - Task: Write a function that converts an object to an array of its keys.
+//  - Test:
+//    ```javascript
+//    const obj = { name: 'Alice', age: 30, city: 'NYC' };
+//    console.log(objectKeysToArray(obj));
+//    ```
+//  - Expected Output: `['name', 'age', 'city']`
+
+
+function objectKeysToArray(object) {
+  let array = [];
+
+  for (let [key, value] of Object.entries(obj)) {
+
+    array.push(key);
+  }
+  return array;
+}
+
+const obj = { name: 'Alice', age: 30, city: 'NYC' };
+console.log(objectKeysToArray(obj));
+
+
+
+// 11. **Convert Object to Array of Values**
+//     - Task: Write a function that converts an object to an array of its values.
+//     - Test:
+//       ```javascript
+//       const obj = { name: 'Alice', age: 30, city: 'NYC' };
+//       console.log(objectValuesToArray(obj));
+//       ```
+//     - Expected Output: `['Alice', 30, 'NYC']`
+
+
+
+
+function objectValuesToArray(object) {
+  let array = [];
+
+  for (let [key, value] of Object.entries(obj)) {
+
+    array.push(value);
+  }
+  return array;
+}
+
+const obj = { name: 'Alice', age: 30, city: 'NYC' };
+console.log(objectValuesToArray(obj));
+
+
+
+
+
+// 12. **Convert an Array of Objects to a Single Object**
+//     - Task: Write a function that converts an array of objects into a single object.
+//      Assume each object in the array has a unique `key` property.
+//     - Test:
+//       ```javascript
+//       const arr = [{ key: 'a', value: 1 }, { key: 'b', value: 2 }];
+//       console.log(arrayToObject(arr));
+//       ```
+//     - Expected Output: `{ a: 1, b: 2 }`
+
+
+function arrayToObject(array) {
+  const object = {};
+  for (i = 0; i < array.length; i++) {
+
+    object[array[i].key] = array[i].value;
+
+  }
+
+  return object;
+}
+
+const arr = [{ key: 'a', value: 1 }, { key: 'b', value: 2 }];
+console.log(arrayToObject(arr));
+
+
+
+// 13. **Group Objects by a Property**
+// - Task: Write a function that groups an array of objects by a specific property.
+// - Test:
+//   ```javascript
+//   const users = [
+//     { name: 'Alice', age: 30 },
+//     { name: 'Bob', age: 20 },
+//     { name: 'Charlie', age: 30 }
+//   ];
+//   console.log(groupBy(users, 'age'));
+//   ```
+// - Expected Output:
+//   ```javascript
+//   {
+//     20: [{ name: 'Bob', age: 20 }],
+//     30: [{ name: 'Alice', age: 30 }, { name: 'Charlie', age: 30 }]
+//   }
+//   ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 14. **Find the Object with the Maximum Value of a Property**
+//     - Task: Write a function that finds the object with the maximum value of a given property in an array of objects.
+//     - Test:
+//       ```javascript
+//       const users = [
+//         { name: 'Alice', age: 30 },
+//         { name: 'Bob', age: 20 },
+//         { name: 'Charlie', age: 35 }
+//       ];
+//       console.log(findMax(users, 'age'));
+//       ```
+//     - Expected Output: `{ name: 'Charlie', age: 35 }`
+
+
+
+function findMax(array, prop) {
+
+
+  let max = array[0][prop];
+  let output;
+  for (i = 0; i < array.length; i++) {
+
+    if (array[i][prop] > max) {
+      max = array[i][prop];
+      output = array[i];
+    }
+
+  }
+  return output;
+}
+
+const users = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 20 },
+  { name: 'Charlie', age: 35 }
+];
+
+
+console.log(findMax(users, 'age'));
+
+
+// 15. **Sum the Values of a Specific Property in an Array of Objects**
+//     - Task: Write a function that sums the values of a specific property in an array of objects.
+//     - Test:
+//       ```javascript
+//       const items = [
+//         { name: 'item1', price: 10 },
+//         { name: 'item2', price: 15 },
+//         { name: 'item3', price: 20 }
+//       ];
+//       console.log(sumProperty(items, 'price'));
+//       ```
+//     - Expected Output: `45`
+
+
+function sumProperty(array, prop) {
+
+
+  let max = 0;
+  for (i = 0; i < array.length; i++) {
+    max += array[i][prop];
+  }
+  return max;
+}
+
+
+const items = [
+  { name: 'item1', price: 10 },
+  { name: 'item2', price: 15 },
+  { name: 'item3', price: 20 }
+];
+console.log(sumProperty(items, 'price'));
