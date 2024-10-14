@@ -14,6 +14,29 @@ fabb(3)
 
 
 
+// WAP to print Fibonacci series (method 2)
+
+
+function printFibonacciSeries(terms) {
+    let a = 0, b = 1;
+    console.log(a); // Print the first Fibonacci number (0)
+    if (terms > 1) {
+      console.log(b); // Print the second Fibonacci number (1)
+    }
+    
+    for (let i = 3; i <= terms; i++) { // Start from the third term
+      let next = a + b;  // Generate the next Fibonacci number
+      console.log(next); // Print the next Fibonacci number
+      a = b;             // Move the sequence forward
+      b = next;
+    }
+  }
+  
+  printFibonacciSeries(10);
+  
+
+
+
 // WAP to print Sum of first N  Fibonacci Numbers
 
 
