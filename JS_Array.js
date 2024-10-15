@@ -68,7 +68,7 @@ In JavaScript, objects use named indexes.
 
 
 
-    Array.length
+Array.length
 Array.toString()
 Array.at()
 Array.join()
