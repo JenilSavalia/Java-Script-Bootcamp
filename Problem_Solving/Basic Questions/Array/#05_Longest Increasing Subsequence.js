@@ -7,23 +7,17 @@
 function longestIncreasingSubsequence(array) {
 
 
-    // step 1 => sorting the array
-
-    for (i = 0; i < array.length; i++) {
-        for (j = i + 1; j < array.length; j++) {
-            if (array[i] > array[j]) {
-                temp = array[i]
-                array[i] = array[j]
-                array[j] = temp;
-            }
-        }
-    }
-
-
+    let output = [];
     
-
-
-
-
-
-}
+        for (i = 0; i < array.length; i++) {
+            
+            if(array[i]>array[i+1]){
+                output.push(array[i])
+            }
+            
+        }
+    
+    console.log(output)
+    }
+    
+    longestIncreasingSubsequence([10, 22, 9, 33, 21, 50, 41, 60, 80])
