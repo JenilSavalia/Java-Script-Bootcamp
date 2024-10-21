@@ -5,8 +5,7 @@
 
 
 
-
-function maxDifference(arr) {
+function maxDifference(array) {
 
     let max = array[0] - array[1];
 

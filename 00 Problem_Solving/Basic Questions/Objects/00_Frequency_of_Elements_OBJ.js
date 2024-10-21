@@ -4,25 +4,36 @@
 //     - Expected Output: `{1: 1, 2: 2, 3: 3}`
 
 
-function countFrequency(array){
-    
+function countFrequency(array) {
+
     let obj = {};
-    
-    for(i=0;i<array.length;i++){
-        
-        if(!obj.hasOwnProperty(array[i])){
+
+    for (i = 0; i < array.length; i++) {
+
+        if (!obj.hasOwnProperty(array[i])) {
             obj[array[i]] = 1;
         }
-        else{
+        else {
             obj[array[i]] = obj[array[i]] + 1;
         }
-        
+
     }
-    
+
     console.log(obj)
-    
-    
+    let key = 0;
+ 
+
+    for (let x in obj) {
+
+        if (obj[x] > max) {
+
+            key = obj[x]
+        }
+
+    }
+console.log(key)
+
 }
 
-let arr = [1, 2, 2, 3, 3, 3,1];
+let arr = [1, 2, 2, 3, 3, 3, 1];
 countFrequency(arr)
