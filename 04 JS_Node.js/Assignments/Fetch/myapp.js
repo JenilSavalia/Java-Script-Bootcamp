@@ -2,8 +2,11 @@ const express = require("express");
 const app = express();
 app.use(express.json()); // Middleware to parse JSON bodies
 
+// CORS error resolve
+const cors = require("cors");
+app.use(cors());
 
-const PORT = 3000;
+const PORT = 3002;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
@@ -67,6 +70,20 @@ app.get("/studentdata/:name/email", (req, res) => {
     let Student = studentsData[req.params.name];
     if (Student) {
         res.json(Student.email);
+    }
+    else {
+        res.status(404).send("Data not found");
+    }
+
+})
+
+//4. GET Request 4: Retrieve a Student's websites by Name
+//  /students/:name/email
+app.get("/studentdata/:name/websites", (req, res) => {
+
+    let Student = studentsData[req.params.name];
+    if (Student) {
+        res.json(Student.websites);
     }
     else {
         res.status(404).send("Data not found");
