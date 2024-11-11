@@ -34,4 +34,4 @@ const sum = numbers.reduce((total, currentValue) => {
     return total + currentValue;
 }, 0)
 
-console.log(sum); // 15
+console.log(sum); 

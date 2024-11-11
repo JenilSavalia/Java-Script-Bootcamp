@@ -6,6 +6,10 @@
 destructuring lets you directly pull specific properties into variables with a single line of code.
 
 
+// Syntax
+// const { property1, property2 } = object;
+
+
 
 // Suppose you have an object:
 const user = { firstName: 'John', lastName: 'Doe', age: 25 };
